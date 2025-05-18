@@ -11,4 +11,9 @@ se crea un main donde es implementado todas las clases.
 
 ![image](https://github.com/user-attachments/assets/94dc62b8-7945-4d6e-8ca9-561f4ed7ba6b)
 
+#Commit shopping cart update
+Se crea una nueva clase para almacenar la cantidad de cada producto, se cambia orden de compra se deja de
+referenciar a un listado de productos por la clase producto orden, se agrega un método para calcular el 
+valor total de la orden de compra.
+
 #Merge feature/sprint1 to main
