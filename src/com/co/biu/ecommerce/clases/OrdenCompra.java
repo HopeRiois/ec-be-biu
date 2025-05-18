@@ -18,17 +18,21 @@ private Long id;
 	
 	private Long idUsuario;
 	
-	private List<Producto> productos;
+	private List<ProductoOrden> productosOrden;
 	
 	private LocalDateTime fechaOrden;
 	
 	private String estado;
 	
 	public void consultarCarrito() {
-		
+
 	}
 	
 	public void editarCarrito() {
+		
+	}
+	
+	public void calcularTotalOrden() {
 		
 	}
 	
