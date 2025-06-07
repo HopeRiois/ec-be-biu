@@ -1,6 +1,8 @@
 package com.co.biu.ecommerce;
 
 import com.co.biu.ecommerce.clases.*;
+import com.co.biu.ecommerce.clases.abstractas.Producto;
+import com.co.biu.ecommerce.clases.abstractas.Usuario;
 
 public class EcommerceApplication {
 
@@ -11,10 +13,11 @@ public class EcommerceApplication {
 		InventarioHistorico invHist = new InventarioHistorico();
 		OrdenCompra orden = new OrdenCompra();
 		Pedido pedido = new Pedido();
-		Producto prod = new Producto();
+		Producto prodDigital = new ProductoDigital();
+		Producto prodFisico = new ProductoFisico();
 		ProductoOrden productoOrd = new ProductoOrden();
-		Rol rol = new Rol();
-		Usuario usuario = new Usuario();
+		Cliente usuario = new Cliente();
+		usuario.getId();
 		System.out.println("Main");
 	}
 }

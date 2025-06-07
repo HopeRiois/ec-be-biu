@@ -1,53 +1,43 @@
-package com.co.biu.ecommerce.clases;
+package com.co.biu.ecommerce.clases.abstractas;
 
 import java.time.LocalDateTime;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class Usuario {
+@Getter
+@Setter
+public abstract class Usuario {
 
 	private Long id;
-	
-	private Long idRol;
-	
+
 	private String nombres;
-	
+
 	private String apellidos;
-	
+
 	private String correo;
-	
+
 	private String telefono;
-	
+
 	private LocalDateTime fechaNacimiento;
-	
+
 	private String direccion;
-	
+
 	private String contraseña;
-	
-	public void crearUsuario() {
-		
-	}
-	
+
 	public void editarUsuario() {
-		
+
 	}
-	
+
 	public void IniciarSesion() {
-		
+
 	}
-	
+
 	public void cerrarSesion() {
-		
+
 	}
-	
+
 	public void recuperarClaveOtp() {
-		
+
 	}
 }
