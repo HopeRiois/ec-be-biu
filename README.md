@@ -1,19 +1,19 @@
 # Java 21
 
-Este es un proyecto Java para la creaci髇 de una plataforma ecommerce. 
+Este es un proyecto Java para la creaci贸n de una plataforma ecommerce. 
 
 ----- feature sprint1
 
 #Commit Setup
-Se crea los archivos del proyecto, se agrega la dependencia de Lombok para facilitar la creaci贸n de las 
-clases, se definen las clases con sus atributos y m閠odos que van a ser utilizados sin implementaci髇, 
+Se crea los archivos del proyecto, se agrega la dependencia de Lombok para facilitar la creaci脙鲁n de las 
+clases, se definen las clases con sus atributos y m茅todos que van a ser utilizados sin implementaci贸n, 
 se crea un main donde es implementado todas las clases.
 
 ![image](https://github.com/user-attachments/assets/94dc62b8-7945-4d6e-8ca9-561f4ed7ba6b)
 
 #Commit shopping cart update
 Se crea una nueva clase para almacenar la cantidad de cada producto, se cambia orden de compra se deja de
-referenciar a un listado de productos por la clase producto orden, se agrega un m閠odo para calcular el 
+referenciar a un listado de productos por la clase producto orden, se agrega un m茅todo para calcular el 
 valor total de la orden de compra.
 
 #Merge feature/sprint1 to main
@@ -24,13 +24,15 @@ valor total de la orden de compra.
 Se crea un nuevo paquete para organizar el proyecto, separando las clases normales de las abstractas, en el 
 nuevo paquete se mueven las clases Producto y Usuario, y se les actualiza el tipo de clase a abstracto, esto
 implica que se deben remover las anotaciones de lombok relacionadas con los constructores. Adicionalmente, 
-se cambia la anotaci髇 Data y se colocan getters y setters para mayor claridad.
+se cambia la anotaci贸n Data y se colocan getters y setters para mayor claridad.
 
-Image
+![image](https://github.com/user-attachments/assets/e00678a7-6618-4679-aeda-bc1f111ec8b8)
 
 Se crean nuevas clases que van a extender las clases abstractas, estas clases van a recibir todos los atributos
 e implementaciones de la clase padre, y se agregan nuevos campos y funcionalidades que especializan a las hijas.
 Para el proceso de venta se actualizan los atributos para relacionarlos con los usuarios que sean tipo Cliente.
+
+![image](https://github.com/user-attachments/assets/b0a5f37f-3561-4d28-9301-f5326a357cfb)
 
 
 #Merge feature/sprint2 to main
