@@ -1,47 +1,43 @@
-package com.co.biu.ecommerce.clases;
+package com.co.biu.ecommerce.clases.abstractas;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class Producto {
+@Getter
+@Setter
+public abstract class Producto {
 
 	private Long id;
-	
+
 	private Long idCategoria;
-	
+
 	private String nombre;
-	
+
 	private String tipoProducto;
-	
+
 	private float porcentajeDescuento;
-	
+
 	private float descuento;
-	
+
 	private float valorActual;
-	
+
 	private float valoracion;
-	
+
 	private Long cantidadValoraciones;
-	
+
 	private String imagen;
-	
+
 	private String estado;
-	
+
 	public void crearProducto() {
-		
+
 	}
-	
+
 	public void editarProducto() {
-		
+
 	}
-	
+
 	public void consultarProducto() {
-		
+
 	}
 }

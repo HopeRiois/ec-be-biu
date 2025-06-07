@@ -13,9 +13,11 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductoOrden {
+public class ProductoDigital extends Producto {
 
-	private Producto producto;
+	private String urlProducto;
 
-	private int cantidad;
+	private String formatoArchivo;
+
+	private String pesoAchivo;
 }
