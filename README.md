@@ -1,19 +1,19 @@
 # Java 21
 
-Este es un proyecto Java para la creaci髇 de una plataforma ecommerce. 
+Este es un proyecto Java para la creaci贸n de una plataforma ecommerce. 
 
 ----- feature sprint1
 
 #Commit Setup
-Se crea los archivos del proyecto, se agrega la dependencia de Lombok para facilitar la creaci髇 de las 
-clases, se definen las clases con sus atributos y m閠odos que van a ser utilizados sin implementaci髇, 
+Se crea los archivos del proyecto, se agrega la dependencia de Lombok para facilitar la creaci贸n de las 
+clases, se definen las clases con sus atributos y m茅todos que van a ser utilizados sin implementaci贸n, 
 se crea un main donde es implementado todas las clases.
 
 ![image](https://github.com/user-attachments/assets/94dc62b8-7945-4d6e-8ca9-561f4ed7ba6b)
 
 #Commit shopping cart update
 Se crea una nueva clase para almacenar la cantidad de cada producto, se cambia orden de compra se deja de
-referenciar a un listado de productos por la clase producto orden, se agrega un m閠odo para calcular el 
+referenciar a un listado de productos por la clase producto orden, se agrega un m茅todo para calcular el 
 valor total de la orden de compra.
 
 #Merge feature/sprint1 to main
@@ -25,7 +25,7 @@ valor total de la orden de compra.
 Se crea un nuevo paquete para organizar el proyecto, separando las clases normales de las abstractas, en el 
 nuevo paquete se mueven las clases Producto y Usuario, y se les actualiza el tipo de clase a abstracto, esto
 implica que se deben remover las anotaciones de lombok relacionadas con los constructores. Adicionalmente, 
-se cambia la anotaci髇 Data y se colocan getters y setters para mayor claridad.
+se cambia la anotaci贸n Data y se colocan getters y setters para mayor claridad.
 
 ![image](https://github.com/user-attachments/assets/e00678a7-6618-4679-aeda-bc1f111ec8b8)
 
@@ -42,29 +42,30 @@ En el proceso de venta se actualizan los atributos para relacionarlos con los us
 
 #Commit Polymorphism, overloading and overriding
 
-Se crea un nuevo paquete llamado utils, donde se van a utilizar m閠odos est醫icos que seran utilizados por las
+Se crea un nuevo paquete llamado utils, donde se van a utilizar m茅todos est谩ticos que seran utilizados por las
 otras clases, se crea uno para String y otro para Colecciones que permitan determinar si el parametro de entrada
 es null o vacio. 
 
-Image.
+![image](https://github.com/user-attachments/assets/907ae7cc-5ab3-452d-8659-b193d44ba8eb)
 
-Se realiza la implementaci髇 de polimorfismo para que los m閠odos de tipo producto, admitan los productos fisicos
-y digitales, el m閠odo implementado es editarCarrito de compra, dicho m閠odo se encarga de agregar, eliminar o 
+Se realiza la implementaci贸n de polimorfismo para que los m茅todos de tipo producto, admitan los productos fisicos
+y digitales, el m茅todo implementado es editarCarrito de compra, dicho m茅todo se encarga de agregar, eliminar o 
 modificar los productos del carrito de compras. Se implementa con sus respectivas validaciones, apoyado en los 
-m閠odos utiles y usando lambdas.
-Image.
+m茅todos utiles y usando lambdas.
 
-Se crea un m閠odo de sobrecarga que imprime la informaci髇 b醩ica de los productos en el carrito estos metodos
+![image](https://github.com/user-attachments/assets/88693a65-18b7-4a94-946a-9e2518b4af35)
+
+Se crea un m茅todo de sobrecarga que imprime la informaci贸n b谩sica de los productos en el carrito estos metodos
 son: imprimir todos los productos, filtrados por id, por tipo producto y por categoria, al igual que con editar
 carrito, se utiliza lambdas para filtrar las ordenes de compra (Carrito).
 
-Image.
+![image](https://github.com/user-attachments/assets/38100d59-c817-41c3-a44e-5006d4ff0821)
 
-En la clase padre productos se crea un m閠odo que imprime la informaci髇 detallada de los productos, y en las clases
-hijas producto fisico y digital, se realiza una sobreescritura para que cada subclase tenga una adaptaci髇 diferente
-de la informaci髇 a imprimir con base a sus atributos. Se implementa validaciones para productos y constructores 
+En la clase padre productos se crea un m茅todo que imprime la informaci贸n detallada de los productos, y en las clases
+hijas producto fisico y digital, se realiza una sobreescritura para que cada subclase tenga una adaptaci贸n diferente
+de la informaci贸n a imprimir con base a sus atributos. Se implementa validaciones para productos y constructores 
 tanto para las clases padres como con las clases hijas.
 
-Image.
+![image](https://github.com/user-attachments/assets/6b022c45-b6bd-4090-88a9-d7b6900edd66)
 
 #Merge feature/sprint3 to main
