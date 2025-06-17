@@ -18,7 +18,6 @@ public class EcommerceApplication {
 		ProductoDigital prodDigital = new ProductoDigital();
 		ProductoFisico prodFisico = new ProductoFisico();
 		ProductoOrden productoOrd = new ProductoOrden();
-		
 		//Prueba de polimorfismo productos
 		List<Producto> prods = new ArrayList<>();
 		prods.add(prodDigital);
