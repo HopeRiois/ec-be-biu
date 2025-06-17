@@ -49,13 +49,13 @@ es null o vacio.
 ![image](https://github.com/user-attachments/assets/907ae7cc-5ab3-452d-8659-b193d44ba8eb)
 
 Se realiza la implementación de polimorfismo para que los métodos de tipo producto, admitan los productos fisicos
-y digitales, el método implementado es editarCarrito de compra, dicho método se encarga de agregar, eliminar o 
+y digitales, el mÃ©todo implementado es editarCarrito de compra, dicho método se encarga de agregar, eliminar o 
 modificar los productos del carrito de compras. Se implementa con sus respectivas validaciones, apoyado en los 
 métodos utiles y usando lambdas.
 
 ![image](https://github.com/user-attachments/assets/88693a65-18b7-4a94-946a-9e2518b4af35)
 
-Se crea un método de sobrecarga que imprime la información básica de los productos en el carrito estos metodos
+Se crea un método de sobrecarga que imprime la informacián básica de los productos en el carrito estos metodos
 son: imprimir todos los productos, filtrados por id, por tipo producto y por categoria, al igual que con editar
 carrito, se utiliza lambdas para filtrar las ordenes de compra (Carrito).
 
@@ -69,3 +69,25 @@ tanto para las clases padres como con las clases hijas.
 ![image](https://github.com/user-attachments/assets/6b022c45-b6bd-4090-88a9-d7b6900edd66)
 
 #Merge feature/sprint3 to main
+
+----- feature sprint4
+
+#Commit Encapsulation and abstraction
+
+Se cambia los identificadores de acceso de los atributos y métodos de las clases del proyecto con el fin de generar coherencia con el esquema planteado.
+
+![image](https://github.com/user-attachments/assets/18332f4a-7ba2-43cf-bfb4-dddc765ff061)
+
+Por otro lado, se agrega una bandera en la clase de usuario que indica si el usuario se encuentra logeado y tiene permiso de realizar sus funciones, se implementan los métodos para iniciar, cerrar sesión y validar que el usuario este diligenciado correctamente.
+
+![image](https://github.com/user-attachments/assets/912698fa-2557-454a-aed8-c846a9bb7d3f)
+
+En la clase de utiles de string, se agrega un nuevo método estático que valida que un correo sea valido, mediante el uso de expresiones regulares. Adicionalmente, se crea una nueva clase de utiles para fecha y un método que verifique que el usuario tenga al menos 15 años.
+
+![image](https://github.com/user-attachments/assets/00e8969b-71ec-4b3c-9cde-9fa6f46d4762)
+
+Por último, se aplican los conceptos de abastracción creando una nueva clase abstracta llamada Item, está clase contiene la información más básica de los productos, identificador, nombre y precio. Para mantener la jerarquía propuesta, producto extiende a item y de esta manera todas sus subclases podrán acceder a dichos atributos.
+
+![image](https://github.com/user-attachments/assets/430edc8f-f510-4ab0-a083-bc6542dd5ad3)
+
+#Merge feature/sprint4 to main

@@ -9,42 +9,37 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class Producto {
+public abstract class Producto extends Item {
 
-	private Long id;
+	protected Long idCategoria;
 
-	private Long idCategoria;
+	protected String tipoProducto;
 
-	private String nombre;
+	protected float porcentajeDescuento;
 
-	private String tipoProducto;
+	protected float descuento;
 
-	private float porcentajeDescuento;
+	protected float valorActual;
 
-	private float descuento;
+	protected float valoracion;
 
-	private float valorReal;
+	protected Long cantidadValoraciones;
 
-	private float valorActual;
+	protected String imagen;
 
-	private float valoracion;
+	protected String estado;
 
-	private Long cantidadValoraciones;
-
-	private String imagen;
-
-	private String estado;
-
-	public Producto(Long idCategoria, String nombre, String tipoProducto, float porcentajeDescuento, float descuento,
-			float valorReal, float valorActual, float valoracion, Long cantidadValoraciones, String imagen,
+	public Producto(Long idCategoria, String tipoProducto, String nombre, float precio, float porcentajeDescuento,
+			float descuento, float valorActual, float valoracion, Long cantidadValoraciones, String imagen,
 			String estado) {
-		this.id = Instant.now().toEpochMilli();
+		// Se llama al constructor de item asignandole el primer parametro id con la
+		// hora desde 1970
+		super(Instant.now().toEpochMilli(), nombre, precio);
 		this.idCategoria = idCategoria;
 		this.nombre = nombre;
 		this.tipoProducto = tipoProducto;
 		this.porcentajeDescuento = porcentajeDescuento;
 		this.descuento = descuento;
-		this.valorReal = valorReal;
 		this.valorActual = valorActual;
 		this.valoracion = valoracion;
 		this.cantidadValoraciones = cantidadValoraciones;
@@ -64,19 +59,20 @@ public abstract class Producto {
 	 */
 	public void consultarDetalleProducto() {
 		System.out.println("Producto: " + this.nombre + ". Tipo Producto: " + this.tipoProducto + ". Valor real: "
-				+ this.valorReal + "$. Descuento: " + this.descuento + "$. Valor Actual: " + this.valorActual
+				+ this.precio + "$. Descuento: " + this.descuento + "$. Valor Actual: " + this.valorActual
 				+ "$. Valoración: " + this.valoracion + ". CantidadValoraciones: " + this.cantidadValoraciones
 				+ ". Imagen: " + this.imagen);
 	}
 
 	/**
 	 * Este método valida que los parametros ingresados de un producto sean validos.
+	 * 
 	 * @return booleano indicando si el producto es valido o no.
 	 */
 	public boolean esProductoValido() {
 		return this.idCategoria > 0L && StringUtils.isNullOrEmpty(this.nombre)
 				&& !StringUtils.isNullOrEmpty(this.tipoProducto) && this.porcentajeDescuento >= 0 && this.descuento >= 0
-				&& this.valorActual > 0 && this.valorReal > 0 && this.cantidadValoraciones >= 0
+				&& this.valorActual > 0 && this.precio > 0 && this.cantidadValoraciones >= 0
 				&& !StringUtils.isNullOrEmpty(this.imagen) && !StringUtils.isNullOrEmpty(this.estado);
 	}
 
