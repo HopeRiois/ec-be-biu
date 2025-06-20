@@ -2,6 +2,8 @@ package com.co.biu.ecommerce.clases;
 
 import java.time.LocalDateTime;
 
+import com.co.biu.ecommerce.clases.abstractas.Producto;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,25 +15,16 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Inventario {
+public class ProductoInventario {
 
-	private Long id;
-
-	private Long idProducto;
+	private Producto producto;
 
 	private LocalDateTime fechaCreacion;
 
 	private LocalDateTime fechaModificacion;
 
-	private Long cantidadDisponible;
+	private int cantidadDisponible;
 
 	private String observaciones;
-	
-	public void modificarInventario() {
-		
-	}
-	
-	public void consultarInventario() {
-		
-	}
+
 }

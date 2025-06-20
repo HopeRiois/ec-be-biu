@@ -9,21 +9,22 @@ import com.co.biu.ecommerce.clases.abstractas.Producto;
 public class EcommerceApplication {
 
 	public static void main(String[] args) {
-		//Prueba de constructores de clases
+		// Prueba de constructores de clases
 		Categoria cat = new Categoria();
-		Inventario inv = new Inventario();
+		InventarioFisico invFis = new InventarioFisico();
+		InventarioDigital invDig = new InventarioDigital();
 		InventarioHistorico invHist = new InventarioHistorico();
 		OrdenCompra orden = new OrdenCompra();
 		Pedido pedido = new Pedido();
 		ProductoDigital prodDigital = new ProductoDigital();
 		ProductoFisico prodFisico = new ProductoFisico();
 		ProductoOrden productoOrd = new ProductoOrden();
-		//Prueba de polimorfismo productos
+		// Prueba de polimorfismo productos
 		List<Producto> prods = new ArrayList<>();
 		prods.add(prodDigital);
 		prods.add(prodFisico);
-		
-		//Prueba de polimorfismo con productos digitales y fisicos
+
+		// Prueba de polimorfismo con productos digitales y fisicos
 //		orden.editarCarrito(prodDigital, false, 5);
 //		orden.editarCarrito(prodFisico, false, 2);
 

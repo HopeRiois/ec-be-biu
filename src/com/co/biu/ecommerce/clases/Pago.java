@@ -1,7 +1,5 @@
 package com.co.biu.ecommerce.clases;
 
-import java.time.LocalDateTime;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,18 +9,26 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Pedido {
+@NoArgsConstructor
+public class Pago {
 
 	private Long id;
 
-	private Long idCliente;
+	private Cliente cliente;
 
-	private Long idOrden;
+	private OrdenCompra ordenCompra;
 
-	private LocalDateTime fechaCompra;
+	private double subtotal;
+
+	private double impuestos;
+
+	private double total;
+
+	private String metodoPago;
 
 	private String estado;
+
+	private String informacionExtra;
 
 }

@@ -91,3 +91,29 @@ Por último, se aplican los conceptos de abastracción creando una nueva clase a
 ![image](https://github.com/user-attachments/assets/430edc8f-f510-4ab0-a083-bc6542dd5ad3)
 
 #Merge feature/sprint4 to main
+
+----- feature sprint5
+
+#Commit Interfaces and Abstract classes
+
+Se crean nuevos paquetes para almacenar las interfaces del proyecto, se actualiza el tipo de clase a Inventario, que ahora pasa a ser una clase abstracta, a la cual se le modifican los atributos y métodos, en está clase abstracta se crea un método abstracto para que sea implementado por las clases que lo hereden.
+
+![image](https://github.com/user-attachments/assets/34659bd7-fc87-476a-9a12-de64b2c39529)
+
+El método abstracto creado se llama gestionar stock, que permite agregar, modificar o eliminar del stock un producto, para facilitar el manejo del inventario se crea una clase intermedia llamada producto inventario, esta clase tiene la información de la cantidad de productos que hay. Se crean dos clases, inventario físico y digital, estas clases heredan de Inventario, la implementación varia en que el inventario digital permite manejar stock negativo. 
+
+![image](https://github.com/user-attachments/assets/dcc00b83-7e56-4856-8bb2-57550ade7d2e)
+
+Se crea una interfaz para llevar le proceso de pago de la plataforma, esta interfaz define los métodos que deben ser implementados según el medio de pago escogido por el usuario.
+
+![image](https://github.com/user-attachments/assets/581dae2b-dfe1-4d39-9b98-44b448c580d3)
+
+Cabe destacar que en las clases que implementan la interfaz se tomó el impuesto de la compra sobre un valor del 20%, sin importar el medio de pago. Algunas de estás clases solicitaran entradas por parte del usuario y se debe asumir que todas al final van a redirigir a una pasarela de pagos.
+
+![image](https://github.com/user-attachments/assets/b694741c-b849-45b4-a326-8e95852c7a67)
+
+Por último, se crea una nueva clase para llevar el control de pagos realizados por la plataforma, está clase no va a tener métodos implementados, únicamente tiene los atributos que identifican la compra y su estado.
+
+![image](https://github.com/user-attachments/assets/e4668656-8534-49c6-92d4-da474ff9d53b)
+
+#Merge feature/sprint5 to main
