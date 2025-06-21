@@ -2,10 +2,13 @@ package com.co.biu.ecommerce.clases.abstractas;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.co.biu.ecommerce.clases.Administrativo;
 import com.co.biu.ecommerce.clases.ProductoInventario;
+import com.co.biu.ecommerce.observers.InventarioObserver;
+import com.co.biu.ecommerce.utils.CollectionUtils;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -48,5 +51,29 @@ public abstract class Inventario {
 	 */
 	public abstract List<ProductoInventario> administrarStock(Producto producto, boolean eliminaProducto,
 			int cantidadDisponible, Administrativo administrativo, String reporte);
+
+	private List<InventarioObserver> observadores;
+
+	public void agregarObservador(InventarioObserver observador) {
+		if (CollectionUtils.isListNullOrEmpty(observadores)) {
+			observadores = new ArrayList<>();
+		}
+		observadores.add(observador);
+	}
+
+	public void eliminarObservador(InventarioObserver observador) {
+		observadores.remove(observador);
+	}
+
+	public void notificarObservadores() {
+		for (InventarioObserver o : observadores) {
+			o.notificar(this);
+		}
+	}
+
+	public void setFechaModificacion(LocalDateTime fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
+		notificarObservadores();
+	}
 
 }
