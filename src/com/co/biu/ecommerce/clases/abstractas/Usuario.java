@@ -30,6 +30,24 @@ public abstract class Usuario {
 
 	protected boolean logeado;
 
+	public Usuario(Long id, String nombres, String apellidos, String correo, String telefono,
+			LocalDateTime fechaNacimiento, String direccion, String contraseña, boolean logeado) {
+		super();
+		this.id = id;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.correo = correo;
+		this.telefono = telefono;
+		this.fechaNacimiento = fechaNacimiento;
+		this.direccion = direccion;
+		this.contraseña = contraseña;
+		this.logeado = logeado;
+	}
+
+	public Usuario() {
+
+	}
+
 	public void editarUsuario() {
 
 	}
@@ -84,4 +102,5 @@ public abstract class Usuario {
 	public void recuperarClaveOtp() {
 
 	}
+
 }
