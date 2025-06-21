@@ -117,3 +117,29 @@ Por último, se crea una nueva clase para llevar el control de pagos realizados 
 ![image](https://github.com/user-attachments/assets/e4668656-8534-49c6-92d4-da474ff9d53b)
 
 #Merge feature/sprint5 to main
+
+----- feature sprint6
+
+#Commit Design patterns
+
+Se crean nuevos paquetes para distribuir el proyecto, estos paquetes son enum, fabrica, config y observers. El objetivo de esta feature era implementar 3 patrones de diseño, singleton, factory y observer. Se planteo el patrón singleton para las configuraciones del proyecto, asegurandose de mantener una sola fuente de la verdad. Es decir, que tenga una instancia única.
+
+![image](https://github.com/user-attachments/assets/6c70a44c-b511-4874-8af7-20dacff29bf6)
+
+En el caso del patrón factory, se decidió manejar mediante enums y switches de tal manera que se cree de forma dinamica la clase hija según la selección. Adicionalmente, a las fabricas se les agregó un método que permite crear los objetos utilizando todos los campos de la clase padre.
+
+![image](https://github.com/user-attachments/assets/6d760b22-aeda-4c1e-97b4-040e5a6f811b)
+
+Para el patron observer, se agregó en las interfaces que definen los métodos que van a realizarse una vez se cumpla cierta condición o evento.
+
+![image](https://github.com/user-attachments/assets/0be1fa30-4805-497b-98a6-de0460945bf8)
+
+Lo siguiente fue modificar las clases que van a accionar los observadores, en la clase seleccionada, se debe crear un listado de observadores, que son los que se van a suscribir al servicio. Se debe agregar la lógica para el manejo de esta lista y su llamado a la interfaz. En el atributo o método que dispare el evento debe ejecutar la función planteada.
+
+![image](https://github.com/user-attachments/assets/195a1ceb-3735-4315-9563-57c650b2f4e6)
+
+Finalmente, se crea una clase de notificación de correo, que imprime las acciones capturadas por el observador. Esta clase implementa los observadores y se les da un manejo particular según las necesidades, para la plataforma se usa para notificar si un pago cambia a estado pagado y nofiticar si se modifica el inventario.
+
+![image](https://github.com/user-attachments/assets/a9a5f4aa-7142-4e60-b936-039f55554197)
+
+#Merge feature/sprint6 to main
