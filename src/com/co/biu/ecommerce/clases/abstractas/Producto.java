@@ -70,7 +70,7 @@ public abstract class Producto extends Item {
 	 * @return booleano indicando si el producto es valido o no.
 	 */
 	public boolean esProductoValido() {
-		return this.idCategoria > 0L && StringUtils.isNullOrEmpty(this.nombre)
+		return this.idCategoria > 0L && !StringUtils.isNullOrEmpty(this.nombre)
 				&& !StringUtils.isNullOrEmpty(this.tipoProducto) && this.porcentajeDescuento >= 0 && this.descuento >= 0
 				&& this.valorActual > 0 && this.precio > 0 && this.cantidadValoraciones >= 0
 				&& !StringUtils.isNullOrEmpty(this.imagen) && !StringUtils.isNullOrEmpty(this.estado);

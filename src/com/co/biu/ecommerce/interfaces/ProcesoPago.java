@@ -3,6 +3,7 @@ package com.co.biu.ecommerce.interfaces;
 import com.co.biu.ecommerce.clases.Cliente;
 import com.co.biu.ecommerce.clases.OrdenCompra;
 import com.co.biu.ecommerce.clases.Pago;
+import com.co.biu.ecommerce.excepciones.PagoExcepcion;
 
 public interface ProcesoPago {
 
@@ -13,7 +14,7 @@ public interface ProcesoPago {
 	 * @param cliente     Cliente
 	 * @return objeto de tipo Pago
 	 */
-	public Pago iniciarPago(OrdenCompra ordenCompra, Cliente cliente);
+	public Pago iniciarPago(OrdenCompra ordenCompra, Cliente cliente) throws PagoExcepcion;
 
 	/**
 	 * Este método permite verificar el estado de la transacción.
