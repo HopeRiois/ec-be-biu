@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.co.biu.ecommerce.clases.Administrativo;
 import com.co.biu.ecommerce.clases.ProductoInventario;
+import com.co.biu.ecommerce.excepciones.InventarioExcepcion;
 import com.co.biu.ecommerce.observers.InventarioObserver;
 import com.co.biu.ecommerce.utils.CollectionUtils;
 
@@ -48,9 +49,10 @@ public abstract class Inventario {
 	 * @param cantidadDisponible boolean
 	 * @return null en caso de que falle el proceso de administrar stock, si
 	 *         funciona correctamente, devuelve un listado de productos inventario.
+	 * @throws InventarioExcepcion
 	 */
 	public abstract List<ProductoInventario> administrarStock(Producto producto, boolean eliminaProducto,
-			int cantidadDisponible, Administrativo administrativo, String reporte);
+			int cantidadDisponible, Administrativo administrativo, String reporte) throws InventarioExcepcion;
 
 	private List<InventarioObserver> observadores;
 
