@@ -162,6 +162,6 @@ Para las pruebas unitarias, se requirío la descarga del archivo jar de Junit y 
 
 Se crea un paquete fuera del proyecto para las pruebas, en este paquete se van a crear las clases para realizar las pruebas a los componentes más criticos de la operación. El objetivo de este proceso es ver como responde el sistema ante diversos casos, los métodos de prueba deben llevar la anotación Test para que sean reconocidos como casos de prueba.
 
-![image](https://github.com/user-attachments/assets/a9a5f4aa-7142-4e60-b936-039f55554197)
+![image](https://github.com/user-attachments/assets/4adfbca6-166a-43db-bcae-05c7d451c2e8)
 
 #Merge feature/sprint7 to main
