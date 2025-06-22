@@ -143,3 +143,25 @@ Finalmente, se crea una clase de notificación de correo, que imprime las accion
 ![image](https://github.com/user-attachments/assets/a9a5f4aa-7142-4e60-b936-039f55554197)
 
 #Merge feature/sprint6 to main
+
+----- feature sprint7
+
+#Commit Exceptions and unit testing
+
+Se crea un paquete para manejar las excepciones personalizadas del proyecto, estas excepciones son particulares para los componentes críticos y se apoyan en un enum para diferenciarlas según el tipo de error que se desea mostrar. Las clases con las excepciones personalizadas pueden extender a la clase Exception general o una particular según la necesidad.
+
+![image](https://github.com/user-attachments/assets/82badbd1-2011-4d36-828b-5b95a4608e88)
+
+Luego se modifica las clases donde se van a colocar los try catch para envolver la lógica del negocio. Se modifican los métodos para indicar que van a disparar las excepciones personalizadas, se plantean los throws de las excepciones y en el catch se crea la lógica para manejar estos casos de error. Adicionalmente, se agrega un catch genérico en caso de que ocurra un error inespirado.
+
+![image](https://github.com/user-attachments/assets/42810988-d6fe-4f2f-8002-269374ccda9a)
+
+Para las pruebas unitarias, se requirío la descarga del archivo jar de Junit y configurarlo en el IDE de desarrollo desde el Java Build Path del proyecto. Esta libreria dio problemas con la modularidad del proyecto. Por lo tanto, se decidió remover el archivo modules-info-java y que se mapen las dependencias de Lombok y Junit desde el ClassPath.
+
+![image](https://github.com/user-attachments/assets/2dd2dc82-f48c-43d7-a483-02c47ec18172)
+
+Se crea un paquete fuera del proyecto para las pruebas, en este paquete se van a crear las clases para realizar las pruebas a los componentes más criticos de la operación. El objetivo de este proceso es ver como responde el sistema ante diversos casos, los métodos de prueba deben llevar la anotación Test para que sean reconocidos como casos de prueba.
+
+![image](https://github.com/user-attachments/assets/a9a5f4aa-7142-4e60-b936-039f55554197)
+
+#Merge feature/sprint7 to main
